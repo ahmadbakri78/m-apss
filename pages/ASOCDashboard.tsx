@@ -497,6 +497,22 @@ export const ASOCDashboard: React.FC = () => {
         />
       </div>
       
+	  {/* FlightAware – Live WMKK (KLIA) */}
+      <Card
+        title="Live Flight Activity – KLIA (WMKK)"
+        className="lg:col-span-4"
+      >
+        <div className="h-[600px]">
+          <iframe
+            src="https://www.flightaware.com/live/airport/WMKK"
+            title="FlightAware WMKK Live"
+            className="w-full h-full border-0 rounded-lg"
+            loading="lazy"
+          />
+        </div>
+      </Card>
+	  
+	  
       {/* Journey Lists */}
       <div className="lg:col-span-4">
         <JourneyLists selectedDate={selectedDate} />
