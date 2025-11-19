@@ -497,21 +497,61 @@ export const ASOCDashboard: React.FC = () => {
         />
       </div>
       
-	  {/* FlightAware – Live WMKK (KLIA) */}
+
+		{/* FlightAware – External Live Feed */}
       <Card
         title="Live Flight Activity – KLIA (WMKK)"
         className="lg:col-span-4"
       >
-        <div className="h-[600px]">
-          <iframe
-            src="https://www.flightaware.com/live/airport/WMKK"
-            title="FlightAware WMKK Live"
-            className="w-full h-full border-0 rounded-lg"
-            loading="lazy"
-          />
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="space-y-2">
+            <p className="text-sm text-gray-700">
+              External live feed from FlightAware for WMKK (KLIA). Use this for
+              detailed real-time movements, delays, and airport status beyond the
+              internal M-APSS view.
+            </p>
+            <ul className="text-xs text-gray-500 list-disc list-inside space-y-1">
+              <li>Live arrivals & departures</li>
+              <li>Individual flight status & ETAs</li>
+              <li>Delay and disruption monitoring</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col items-start md:items-end gap-2">
+            <span className="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-medium text-emerald-700 border border-emerald-100">
+              External feed • FlightAware
+            </span>
+            <a
+              href="https://www.flightaware.com/live/airport/WMKK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-primary text-white text-sm font-medium px-4 py-2 hover:bg-brand-secondary transition-colors"
+            >
+              Open WMKK Live Dashboard
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-4 w-4"
+              >
+                <path d="M12.293 2.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414L14 5.414V13a1 1 0 1 1-2 0V5.414L9.707 7.707A1 1 0 0 1 8.293 6.293l4-4Z" />
+                <path d="M5 4a2 2 0 0 0-2 2v8.5A1.5 1.5 0 0 0 4.5 16h8a2 2 0 0 0 2-2v-1a1 1 0 1 1 2 0v1a4 4 0 0 1-4 4h-8A3.5 3.5 0 0 1 1 14.5V6a4 4 0 0 1 4-4h1a1 1 0 1 1 0 2H5Z" />
+              </svg>
+            </a>
+            <p className="text-[11px] text-gray-400 max-w-xs text-left md:text-right">
+              Note: FlightAware prevents embedding in iframes; content is opened in
+              a separate tab while M-APSS remains your primary command console.
+            </p>
+          </div>
         </div>
       </Card>
-	  
+
+
+
+
+
+
+
 	  
       {/* Journey Lists */}
       <div className="lg:col-span-4">
